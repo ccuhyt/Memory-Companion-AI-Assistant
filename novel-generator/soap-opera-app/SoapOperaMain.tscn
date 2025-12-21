@@ -1,0 +1,308 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdw4x60y6ti1q"]
+
+[ext_resource type="Script" uid="uid://coxouesnchl83" path="res://novel-generator/soap-opera-app/SoapOperaMain.gd" id="1_ig7tw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2yge"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bvp3"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lquwl"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Main" type="Control"]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 1
+script = ExtResource("1_ig7tw")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3336037, 0.497894, 0.59780586, 1)
+
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 90
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "🔥 超狗血八點檔生成器 🔥"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_ig7tw")
+
+[node name="Label_Type" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "📚 選擇故事類型"
+
+[node name="TypeButtons" type="GridContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="BtnRebirth" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TypeButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "重生逆襲"
+
+[node name="BtnFake" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TypeButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "真假千金"
+
+[node name="BtnCEO" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TypeButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "霸道總裁"
+
+[node name="BtnInLaw" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TypeButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "婆媳大戰"
+
+[node name="BtnLegacy" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TypeButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "遺產爭奪"
+
+[node name="BtnCheat" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TypeButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "出軌復仇"
+
+[node name="BtnAmnesia" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TypeButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "失憶梗"
+
+[node name="BtnLocal" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TypeButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "鄉土溫馨"
+
+[node name="BtnRandom" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/TypeButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "🎲 隨機驚喜"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_0xm2m")
+
+[node name="InspireBtn" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "💡 不知道寫什麼？幫我給點靈感"
+
+[node name="InputPanel" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="InputLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/InputPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "💬 你想看什麼劇情? (可不填,讓AI自由發揮)"
+
+[node name="InputText" type="TextEdit" parent="MarginContainer/ScrollContainer/VBoxContainer/InputPanel"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_h2yge")
+
+[node name="Label_Tone" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "🎨 選擇故事風格"
+
+[node name="ToneButtons" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="BtnDogBlood" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ToneButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "狗血 🔥"
+
+[node name="BtnCool" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ToneButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "爽文 💪"
+
+[node name="BtnSad" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ToneButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "虐心 😭"
+
+[node name="BtnFunny" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ToneButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "搞笑 😂"
+
+[node name="BtnWarm" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ToneButtons"]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "溫馨 🤗"
+
+[node name="HSeparator6" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_h2yge")
+
+[node name="Label_Length" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "📏 選擇故事長度"
+
+[node name="LengthSelect" type="OptionButton" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_1bvp3")
+
+[node name="GenerateBtn" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "🎬 開始生成故事!"
+
+[node name="HSeparator5" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_lquwl")
+
+[node name="StoryPanel" type="Panel" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7mycd")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/StoryPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/StoryPanel/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="StoryText" type="RichTextLabel" parent="MarginContainer/ScrollContainer/VBoxContainer/StoryPanel/MarginContainer/ScrollContainer"]
+custom_minimum_size = Vector2(930, 0)
+layout_mode = 2
+theme_override_constants/line_separation = 8
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "請選擇故事類型、風格,然後點擊「開始生成故事」按鈕"
+fit_content = true
+
+[node name="AudioControls" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="PlayBtn" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/AudioControls"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+disabled = true
+text = "🔊 播放語音"
+
+[node name="StopBtn" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/AudioControls"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+disabled = true
+text = "⏹️ 停止"
+
+[node name="EndButtons" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="SequelBtn" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/EndButtons"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "🎬 生成續集"
+
+[node name="SaveBtn" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/EndButtons"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "💾 儲存故事"

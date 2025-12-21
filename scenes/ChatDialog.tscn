@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0qgrdbj86i7n"]
+
+[ext_resource type="Script" uid="uid://bps6vblrvoixa" path="res://scripts/chat_dialog.gd" id="1_6ned7"]
+[ext_resource type="Script" uid="uid://befvrc8p475jp" path="res://scripts/voice_input_button.gd" id="2_ubbtk"]
+
+[node name="ChatDialog" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6ned7")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 305.0
+offset_bottom = 649.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 3.0
+offset_right = 288.0
+offset_bottom = 645.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TitleBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/TitleBar"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "對話框"
+
+[node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer/TitleBar"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "✕"
+
+[node name="ChatDisplay" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+bbcode_enabled = true
+scroll_following = true
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="InputText" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(173, 40)
+layout_mode = 2
+placeholder_text = "輸入你想說的話......"
+
+[node name="VoiceButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "按住說話"
+text = "🎤"
+script = ExtResource("2_ubbtk")
+
+[node name="SendButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "發送"
+
+[node name="HelpLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "小提示：有時候會思考比較久，請耐心等候喔~"
+autowrap_mode = 3
+
+[connection signal="voice_text_ready" from="MarginContainer/VBoxContainer/HBoxContainer/VoiceButton" to="." method="_on_voice_button_voice_text_ready"]
