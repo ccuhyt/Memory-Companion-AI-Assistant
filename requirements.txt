@@ -1,34 +1,55 @@
-# Core / AI
-numpy==2.3.5
+certifi==2025.11.12
+charset-normalizer==3.4.4
+colorama==0.4.6
 faiss-cpu==1.13.1
-sentence-transformers==5.2.0
-scikit-learn==1.8.0
-torch==2.9.1
-transformers==4.57.3
-
-# LLM / API
-openai==2.9.0
-requests==2.32.5
+filelock==3.20.0
+fsspec==2025.12.0
+huggingface-hub==0.36.0
+idna==3.11
+Jinja2==3.1.6
+joblib==1.5.2
+MarkupSafe==3.0.3
+mpmath==1.3.0
+networkx==3.6.1
+numpy==2.3.5
+packaging==25.0
+PyQt5==5.15.11
+PyQt5-Qt5==5.15.2
+PyQt5_sip==12.17.2
 python-dotenv==1.2.1
+PyYAML==6.0.3
+regex==2025.11.3
+requests==2.32.5
+safetensors==0.7.0
+scikit-learn==1.8.0
+scipy==1.16.3
+sentence-transformers==5.2.0
+setuptools==80.9.0
+sympy==1.14.0
+threadpoolctl==3.6.0
+tokenizers==0.22.1
+torch==2.9.1
+tqdm==4.67.1
+transformers==4.57.3
+typing_extensions==4.15.0
+urllib3==2.6.2
 
-# Flask service used by the Godot application
+# Flask API Server
 Flask==3.1.2
 Flask-Cors==6.0.2
 
 # Text-to-Speech
 gTTS==2.5.4
 
-# Voice / Speech-to-Text
+# AI Calendar Feature
+google-api-python-client==2.187.0
+google-auth-httplib2==0.2.1
+google-auth-oauthlib==1.2.3
+openai==2.9.0
+
+# Voice API
 fastapi>=0.110.0
 uvicorn>=0.29.0
 python-multipart>=0.0.9
 groq
 pyaudio
-
-# Google Calendar
-google-api-python-client==2.187.0
-google-auth-httplib2==0.2.1
-google-auth-oauthlib==1.2.3
-
-# Desktop / legacy Python UI module
-PyQt5==5.15.11
