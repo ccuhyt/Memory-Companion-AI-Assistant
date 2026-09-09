@@ -140,7 +140,41 @@ USER_GMAIL=你的_Google_Calendar_帳號
 
 ### 5. Google Calendar 設定（選用）
 
-如果要使用 Google Calendar 功能，除了 `.env` 之外，還需要依照 Google Calendar API 的設定方式準備 Google Cloud 憑證。
+如果要使用 Google Calendar 功能，除了 `.env` 之外，還需要準備 Google Cloud 的 Service Account 憑證。專案的 `ai_calendar.py` 使用 Service Account 讀取 Google Calendar API，而不是一般使用者 OAuth 登入流程。
+
+#### 5.1 啟用 Google Calendar API
+
+1. 開啟 Google Cloud Console。
+2. 建立新的 Google Cloud Project，或選擇已有的 Project。
+3. 在 API Library 中搜尋 **Google Calendar API**。
+4. 啟用 Google Calendar API。
+
+#### 5.2 建立 Service Account
+
+1. 進入 Google Cloud Console 的 **IAM 與管理 → 服務帳戶（Service Accounts）**。
+2. 選擇目前使用的 Google Cloud Project。
+3. 建立一個新的 Service Account。
+4. 記下這個 Service Account 的電子郵件地址，格式通常如下：
+
+```text
+SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com
+```
+
+#### 5.3 建立 JSON 憑證
+
+1. 開啟剛建立的 Service Account。
+2. 進入 **Keys（金鑰）**。
+3. 選擇 **Add key → Create new key**。
+4. 選擇 **JSON**。
+5. 建立後下載 JSON 檔案。
+
+Google Cloud 產生的 Service Account JSON Key 是程式用來驗證 Google API 的憑證。下載後請妥善保存，之後無法再次下載同一個私密金鑰檔案。
+
+將下載的 JSON 檔案放到專案根目錄，並重新命名為：
+
+```text
+credentials.json
+```
 
 專案內提供：
 
@@ -148,9 +182,7 @@ USER_GMAIL=你的_Google_Calendar_帳號
 credentials.example.json
 ```
 
-作為範例檔案。
-
-先將範例檔案複製成程式實際讀取的檔名：
+作為範例檔案。若只是先建立檔名，可以使用：
 
 Windows PowerShell：
 
@@ -158,11 +190,31 @@ Windows PowerShell：
 Copy-Item credentials.example.json credentials.json
 ```
 
-接著將 `credentials.json` 替換為自己的 Google Cloud credentials。完成後即可依照 Google Calendar API 的設定方式進一步完成授權與帳號設定。
+但之後必須將這個範例檔案替換成從 Google Cloud 下載的**真正 Service Account JSON 憑證**。
 
-目前程式的 Calendar 實作會讀取專案根目錄中的 `credentials.json`。
+#### 5.4 將 Service Account 加入 Google Calendar
 
-**注意：** `credentials.json` 若包含真實私人憑證，不能提交到 GitHub。專案只保留範例檔案 `credentials.example.json`。
+因為本專案使用 Service Account 操作指定的 Google Calendar，所以需要把 Service Account 的電子郵件加入要操作的日曆並授予可以新增與修改活動的權限。
+
+1. 開啟 Google Calendar。
+2. 找到要讓程式操作的日曆。
+3. 進入該日曆的設定與共用設定。
+4. 將前面記下的 Service Account 電子郵件加入共用對象。
+5. 授予可以新增與修改活動的權限。
+
+#### 5.5 確認 `.env`
+
+確認 `.env` 中：
+
+```env
+USER_GMAIL=你的_Google_Calendar_帳號
+```
+
+這個值會被程式拿來指定要操作的 Google Calendar。
+
+完成以上設定後，Google Calendar 功能才具備實際建立事件所需的憑證、API 與日曆存取權限。
+
+**注意：** `credentials.json` 包含私密憑證，不能提交到 GitHub。專案只保留範例檔案 `credentials.example.json`。
 
 ## 執行專案
 
