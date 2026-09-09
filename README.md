@@ -1,6 +1,6 @@
 # Memory Companion AI Assistant
 
-一個以 **Godot + Python** 開發的桌面 AI 陪伴系統，整合 AI 對話、雙層記憶、人格管理、語音輸入、AI 八點檔故事生成，以及 Google Calendar 等功能。
+一個以 **Godot + Python** 開發的桌面 AI 陪伴系統，整合 AI 對話、雙層記憶、個性管理、語音輸入、AI 八點檔故事生成，以及 Google Calendar 等功能。
 
 ## 功能特色
 
@@ -8,7 +8,7 @@
 - 🧠 雙層記憶系統
   - Session Memory：保存近期對話
   - Summary Memory：整理長期資訊，並使用 FAISS 進行向量搜尋
-- 🎭 人格管理
+- 🎭 個性管理
 - 🎙️ 語音輸入 / 語音轉文字（STT）
   - 錄製語音
   - 基本音量檢查
@@ -16,7 +16,7 @@
 - 📺 AI 八點檔故事生成
   - 多種故事類型
   - 自訂偏好
-  - 語氣與長度設定
+  - 風格與長度設定
   - 劇情續寫
   - 文字轉語音
 - 📅 AI 輔助 Google Calendar
@@ -24,40 +24,8 @@
 
 ## 系統架構
 
-```text
-┌──────────────────────────────┐
-│          Godot 前端          │
-│                              │
-│  桌面寵物 / 對話 / UI        │
-│  人格管理 / 語音輸入         │
-│  八點檔故事介面               │
-└──────────────┬───────────────┘
-               │
-          Python Bridge / IPC
-               │
-               ▼
-┌──────────────────────────────┐
-│          Python 後端         │
-│                              │
-│  Chat Handler                │
-│  Dual Memory System          │
-│  Personality Manager         │
-│  STT / 音訊處理              │
-│  Soap Opera Generator        │
-│  Calendar Agent              │
-└───────┬───────────┬──────────┘
-        │           │
-        ▼           ▼
-   OpenRouter    Groq Whisper
-        │
-        ▼
-    LLM 服務
+<img width="1386" height="657" alt="image" src="https://github.com/user-attachments/assets/d855bef3-c8b6-4508-9a3b-33bb429e42bc" />
 
-        ┌──────────────────────┐
-        │   Google Calendar    │
-        │         API          │
-        └──────────────────────┘
-```
 
 ## 使用技術
 
