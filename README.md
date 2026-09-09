@@ -364,6 +364,4 @@ Memory-Companion-AI-Assistant/
 
 ## Demo
 
-```text
-[▶ 觀看專案 Demo](https://youtu.be/3kaB8m2eVYY)
-```
+[![Demo 影片](https://img.youtube.com/vi/3kaB8m2eVYY/maxresdefault.jpg)](https://youtu.be/3kaB8m2eVYY)
