@@ -150,7 +150,17 @@ credentials.example.json
 
 作為範例檔案。
 
-目前程式的 Calendar 實作會讀取專案根目錄中的 `credentials.json`。因此，如果要啟用 Calendar 功能，需要準備自己的 `credentials.json`。
+先將範例檔案複製成程式實際讀取的檔名：
+
+Windows PowerShell：
+
+```powershell
+Copy-Item credentials.example.json credentials.json
+```
+
+接著將 `credentials.json` 替換為自己的 Google Cloud credentials。完成後即可依照 Google Calendar API 的設定方式進一步完成授權與帳號設定。
+
+目前程式的 Calendar 實作會讀取專案根目錄中的 `credentials.json`。
 
 **注意：** `credentials.json` 若包含真實私人憑證，不能提交到 GitHub。專案只保留範例檔案 `credentials.example.json`。
 
