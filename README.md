@@ -362,23 +362,8 @@ Memory-Companion-AI-Assistant/
 - `python_scripts/story_generator.py` — AI 八點檔故事生成
 - `python_scripts/ai_calendar.py` — AI 輔助 Google Calendar 功能
 
-## 畫面展示
-
-1. 桌面寵物主畫面
-   <img width="560" height="563" alt="image" src="https://github.com/user-attachments/assets/93a4420a-f61c-4c88-a00d-9bca9a76f60d" />
-
-2. AI 對話介面（可使用語音輸入）
-   <img width="307" height="653" alt="image" src="https://github.com/user-attachments/assets/0fb9e685-a337-440e-a6f9-7a4339c8214b" />
-
-3. 個性管理介面
-   <img width="622" height="552" alt="image" src="https://github.com/user-attachments/assets/ab23a276-59fc-4ec4-b7c3-981fe38eb727" />
-   <img width="712" height="803" alt="image" src="https://github.com/user-attachments/assets/e044e93a-da79-4652-a4c1-33685ef3f2e6" />
-
-4. 八點檔故事生成介面
-   <img width="1287" height="752" alt="image" src="https://github.com/user-attachments/assets/1084ba40-476c-4593-8a9b-050b7463e73b" />
-
 ## Demo
 
 ```text
-[YouTube Demo]https://youtu.be/3kaB8m2eVYY
+[▶ 觀看專案 Demo](https://youtu.be/3kaB8m2eVYY)
 ```
