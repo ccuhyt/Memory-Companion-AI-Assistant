@@ -192,7 +192,7 @@ Godot 啟動專案時會自動建立 Python Server 程序，離開 Godot 時也�
 
 1. 與桌面寵物互動
 2. 開啟對話介面與 AI 聊天
-3. 使用人格管理功能調整人格設定
+3. 使用個性管理功能調整個性設定
 4. 使用語音輸入將語音轉成文字
 5. 開啟八點檔功能生成 AI 故事
 6. 若已完成 Google Calendar 設定，可使用相關行事曆功能
@@ -262,11 +262,11 @@ LLM Context
 服務：OpenRouter
 ```
 
-系統可以將目前對話、相關記憶以及人格設定組合後，再提供給語言模型產生回應。
+系統可以將目前對話、相關記憶以及個性設定組合後，再提供給語言模型產生回應。
 
-## 人格管理
+## 個性管理
 
-專案提供人格管理介面，可以調整桌面寵物的回應方式與人格設定。
+專案提供個性管理介面，可以調整桌面寵物的回應方式與個性設定。
 
 相關程式包含：
 
@@ -297,7 +297,7 @@ personalities/
 
 - 故事類型選擇
 - 使用者偏好
-- 語氣設定
+- 風格設定
 - 故事長度
 - 劇情續寫
 
@@ -366,30 +366,21 @@ Memory-Companion-AI-Assistant/
 
 ## 畫面展示
 
-這裡可以放入實際執行畫面的截圖，展示專案的主要功能。
-
-建議放：
-
 1. 桌面寵物主畫面
-2. AI 對話介面
-3. 人格管理介面
-4. 八點檔故事生成介面
-5. 語音輸入 / 語音辨識結果
+   <img width="560" height="563" alt="image" src="https://github.com/user-attachments/assets/93a4420a-f61c-4c88-a00d-9bca9a76f60d" />
 
-> README 建議以「實際執行畫面」為主，不需要貼大量程式碼。重要程式則透過上面的 GitHub 檔案連結讓讀者查看即可。
+2. AI 對話介面（可使用語音輸入）
+   <img width="307" height="653" alt="image" src="https://github.com/user-attachments/assets/0fb9e685-a337-440e-a6f9-7a4339c8214b" />
+
+3. 個性管理介面
+   <img width="622" height="552" alt="image" src="https://github.com/user-attachments/assets/ab23a276-59fc-4ec4-b7c3-981fe38eb727" />
+   <img width="712" height="803" alt="image" src="https://github.com/user-attachments/assets/e044e93a-da79-4652-a4c1-33685ef3f2e6" />
+
+4. 八點檔故事生成介面
+   <img width="1287" height="752" alt="image" src="https://github.com/user-attachments/assets/1084ba40-476c-4593-8a9b-050b7463e73b" />
 
 ## Demo
 
-Demo 影片上傳 YouTube 後，可以放在這裡：
-
 ```text
-[YouTube Demo](你的 YouTube 連結)
-```
-
-## 專題報告
-
-可以在這裡放上完整專題報告：
-
-```text
-[專題報告](你的報告連結)
+[YouTube Demo]https://youtu.be/3kaB8m2eVYY
 ```
