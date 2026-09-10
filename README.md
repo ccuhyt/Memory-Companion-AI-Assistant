@@ -42,6 +42,8 @@
 | 文字嵌入 | Sentence Transformers |
 | 行事曆 | Google Calendar API |
 
+> **模型備註：** OpenRouter 的免費模型可用性與請求限制可能隨時間變動。如果指定的免費模型出現 `429 Too Many Requests`、模型無法使用或免費額度限制等情況，可至 OpenRouter 查看目前可用的免費模型，並將程式中的模型設定替換成可用的免費模型。
+
 ## 環境需求
 
 開始之前需要準備：
